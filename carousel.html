@@ -65,6 +65,18 @@
         .cycle-pager .cycle-pager-active{
             background-color: #fff;
         }
+        .external{
+            position: static;
+        }
+        .center{
+            text-align: center;
+        }
+        .cycle-pager-active{
+            margin: 0 5px;
+        }
+        #adv-custom-pager.center.external a{
+            margin: 0 5px;
+        }
     </style>
 
 </head>
@@ -72,17 +84,32 @@
 
 <!-- Begin Responsive Carousel -->
 
-<div class="cycle-slideshow">
-    <span class="cycle-prev">&#9001;</span>
-    <span class="cycle-next">&#9002;</span>
-    <span class="cycle-pager"></span>
+<!--<div class="cycle-slideshow">-->
+    <!--<span class="cycle-prev">&#9001;</span>-->
+    <!--<span class="cycle-next">&#9002;</span>-->
+    <!--<span class="cycle-pager"></span>-->
+    <!--<img src="images/homeBckgrd.jpg" alt="Home">-->
+    <!--<img src="images/sunflower.jpg" alt="Sunflower">-->
+    <!--<img src="images/slide1.gif" alt="Slide 1">-->
+    <!--<img src="images/slide2.gif" alt="Slide 2">-->
+<!--</div>-->
+
+<!-- End Responsive Carousel -->
+
+<div class="cycle-slideshow"
+     data-cycle-fx=scrollHorz
+     data-cycle-timeout=2000
+     data-cycle-pager="#adv-custom-pager"
+     data-cycle-pager-template="<a href='#'><img src='{{src}}' width=20 height=20></a>"
+>
     <img src="images/homeBckgrd.jpg" alt="Home">
     <img src="images/sunflower.jpg" alt="Sunflower">
     <img src="images/slide1.gif" alt="Slide 1">
     <img src="images/slide2.gif" alt="Slide 2">
 </div>
+<!-- empty element for pager links -->
+<div id=adv-custom-pager class="center external"></div>
 
-<!-- End Responsive Carousel -->
 
 </body>
 </html>
